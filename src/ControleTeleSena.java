@@ -163,6 +163,10 @@ public class ControleTeleSena {
 
         for (Pessoa pessoa : pessoas) {
             if (pessoa.isVencedor()) {
+                try {
+                    Thread.sleep(1000);
+                } catch (Exception ignored){}
+
                 System.out.println(pessoa.getNome() + "!!!");
                 valorPremiacao = pessoa.getValorPremiacao();
             }
